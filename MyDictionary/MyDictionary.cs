@@ -4,30 +4,43 @@ using System.Text;
 
 namespace MyDictionary
 {
-    class MyDictionary<T>
+    class MyDictionary<TKey, TValue>
     {
-        T[] items;
+        TKey[] keys;
+        TValue [] values;
+        TKey[] tempKey;
+        TValue[] tempValue;
 
         public MyDictionary()
         {
-            items = new T[0];
+            keys = new TKey[0];
+            values = new TValue[0];
         }
-        public void Add(T item)
+        public void Add(TKey key, TValue value)
         {
-            T[] tempItem = items;
-            items = new T[items.Length + 1];
+            TKey[] tempKey = keys;
+            TValue[] tempValue = values;
 
-            for (int i = 0; i < tempItem.Length; i++)
+            keys = new TKey[keys.Length + 1];
+            values = new TValue[values.Length + 1];
+
+            for (int i = 0; i < tempKey.Length; i++)
             {
-                items[i] = tempItem[i];
+                keys[i] = tempKey[i];
+                values[i] = tempValue[i];
             }
 
-            items[items.Length - 1] = item;
+            keys[keys.Length - 1] = key;
+            values[values.Length - 1] = value;
         }
 
-        public int Count
+        public void GetAll()
         {
-            get { return items.Length; }
+
+            for (int i = 0; i < keys.Length; i++)
+            {
+                Console.WriteLine(keys[i] + " " +values[i]);
+            }
 
         }
 

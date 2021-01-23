@@ -6,12 +6,12 @@ namespace MyDictionary
     {
         static void Main(string[] args)
         {
-            MyDictionary<string> myDictionary = new MyDictionary<string>();
-            myDictionary.Add("Java");
-            myDictionary.Add("Python");
-            myDictionary.Add("C#");
+            MyDictionary<int,string> sehirler = new MyDictionary<int,string>();
+            sehirler.Add(34,"İstanbul");
+            sehirler.Add(35,"İzmir");
+            sehirler.Add(06,"Ankara");
 
-            Console.WriteLine(myDictionary.Count);
+            sehirler.GetAll();
         }
     }
 }
