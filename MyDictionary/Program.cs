@@ -6,7 +6,12 @@ namespace MyDictionary
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MyDictionary<string> myDictionary = new MyDictionary<string>();
+            myDictionary.Add("Java");
+            myDictionary.Add("C#");
+            myDictionary.Add("Flutter");
+
+            Console.WriteLine(myDictionary.Count);
         }
     }
 }
