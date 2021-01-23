@@ -10,6 +10,7 @@ namespace Donguler
             string kurs2 = "Programlama için Temel Kurs";
             string kurs3 = "Java Kursu";
 
+
             //array - diziler
 
             string[] kurslar = new string[] { "Yazılımcı Geliştirme Kursu", "Programlama için Temel Kurs", "Java Kursu" , "Python" , "C++"};
@@ -18,6 +19,9 @@ namespace Donguler
             for (int i = 0; i<kurslar.Length; i++  )
             {
                 Console.WriteLine(kurslar[i]);
+                Console.WriteLine(kurs1);
+                Console.WriteLine(kurs2);
+                Console.WriteLine(kurs3);
             }
 
             Console.WriteLine("For Bitti");
