@@ -11,7 +11,6 @@ namespace GenericsOdev
             myDictionary.Add("Silgi");
 
             Console.WriteLine(myDictionary.Count);
-
         }
     }
 }
